@@ -1,11 +1,8 @@
-import React from 'react'
+import Overview from "@/components/overview";
+import React from "react";
 
 const Payouts = () => {
-  return (
-    <div>Payouts
+    return <Overview />;
+};
 
-    </div>
-  )
-}
-
-export default Payouts
+export default Payouts;
