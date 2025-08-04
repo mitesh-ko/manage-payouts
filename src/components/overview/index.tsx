@@ -6,7 +6,7 @@ import Orders from "../orders";
 
 const Overview = () => {
     return (
-        <div className="p-7">
+        <div className="p-3 sm:p-7">
             <div className="flex items-center justify-between">
                 <p className="text-[#1A181E] font-medium text-[20px]">
                     Overview
