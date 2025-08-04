@@ -1,0 +1,57 @@
+[
+    {
+        "id":1,
+        "title":"Home",
+        "svg": "/sidemenu/home.svg"
+    },
+    {
+        "id":2,
+        "title":"Orders",
+        "svg": "/sidemenu/orders.svg"
+    },
+    {
+        "id":3,
+        "title":"Products",
+        "svg": "/sidemenu/products.svg"
+    },
+    {
+        "id":4,
+        "title":"Delivery",
+        "svg": "/sidemenu/delivery.svg"
+    },
+    {
+        "id":5,
+        "title":"Marketing",
+        "svg": "/sidemenu/marketing.svg"
+    },
+    {
+        "id":6,
+        "title":"Analytics",
+        "svg": "/sidemenu/analytics.svg"
+    },
+    {
+        "id":7,
+        "title":"Payouts",
+        "svg": "/sidemenu/payouts.svg"
+    },
+    {
+        "id":8,
+        "title":"Discounts",
+        "svg": "/sidemenu/discounts.svg"
+    },
+    {
+        "id":9,
+        "title":"Audience",
+        "svg": "/sidemenu/audience.svg"
+    },
+    {
+        "id":10,
+        "title":"Appearance",
+        "svg": "/sidemenu/appearance.svg"
+    },
+    {
+        "id":11,
+        "title":"Plugins",
+        "svg": "/sidemenu/plugins.svg"
+    }
+]
