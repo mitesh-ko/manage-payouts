@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import Profile from "./profile";
 import SideMenu from "./sidemenu";
 import Credits from "./credits";
+import { motion } from "framer-motion";
+import { isMobile } from "react-device-detect";
 
 const Sidebar = () => {
     const [expandSidebar, setExpandSidebar] = useState<boolean>(false);
@@ -10,7 +12,17 @@ const Sidebar = () => {
         setExpandSidebar(!expandSidebar);
     };
     return (
-        <div
+        <motion.div
+            initial={{
+                width: expandSidebar ? "250px" : isMobile ? "56px" : "80px",
+            }}
+            animate={{
+                width: expandSidebar ? "250px" : isMobile ? "56px" : "80px",
+            }}
+            transition={{
+                ease: "easeIn",
+                duration: 0,
+            }}
             className={`h-screen ${
                 expandSidebar ? "w-[200px] sm:w-[250px]" : "w-auto"
             }  bg-sidebar  flex-col py-4 p-2 sm:p-5 text-primary flex transition-all duration-300 ease-in absolute sm:relative`}
@@ -21,7 +33,7 @@ const Sidebar = () => {
             />
             <SideMenu expandSidebar={expandSidebar} />
             <Credits expandSidebar={expandSidebar} />
-        </div>
+        </motion.div>
     );
 };
 

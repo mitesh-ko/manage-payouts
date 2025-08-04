@@ -1,21 +1,50 @@
 import React from "react";
-
+import { motion, AnimatePresence } from "framer-motion";
 interface Props {
     expandSidebar: boolean;
 }
 const Credits: React.FC<Props> = ({ expandSidebar }) => {
     return (
-        <div className="bg-[#353C53] p-[4px] sm:p-[10px] rounded-[4px] flex items-center">
-            <div className="p-[6px] rounded-[4px] bg-opacity-10 bg-white">
-                <img src="/wallet.svg" alt="wallet" />
-            </div>
-            <div className={`ml-[20px] ${expandSidebar ? "block" : "hidden"}`}>
-                <p className="text-[13px] font-normal opacity-70">
-                    Available credits
-                </p>
-                <p className="text-[16px] font-medium">222.10</p>
-            </div>
-        </div>
+        <motion.div
+            layout
+            className="bg-[#353C53] p-[10px] rounded-[4px] flex items-center"
+        >
+            <motion.img
+                layout="position"
+                initial={{
+                    width: expandSidebar ? "24px" : "20px",
+                    height: expandSidebar ? "24px" : "20px",
+                }}
+                animate={{
+                    width: expandSidebar ? "24px" : "20px",
+                    height: expandSidebar ? "24px" : "20px",
+                }}
+                className=" rounded-[4px] bg-opacity-10 bg-white"
+                src="/wallet.svg"
+                alt="wallet"
+            />
+            <AnimatePresence>
+                {expandSidebar && (
+                    <motion.div
+                        className={`ml-[16px]`}
+                        initial={{
+                            opacity: 0,
+                        }}
+                        animate={{
+                            opacity: 1,
+                        }}
+                        exit={{
+                            opacity: 0,
+                        }}
+                    >
+                        <p className="text-[13px] font-normal opacity-70 whitespace-nowrap">
+                            Available credits
+                        </p>
+                        <p className="text-[16px] font-medium">222.10</p>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </motion.div>
     );
 };
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 interface Props {
     toggleExpandSidebar: () => void;
@@ -7,31 +8,41 @@ interface Props {
 
 const Profile: React.FC<Props> = ({ toggleExpandSidebar, expandSidebar }) => {
     return (
-        <div className="mb-[24px]">
-            <div
-                className={`flex items-center ${
-                    !expandSidebar ? "justify-center" : ""
-                }`}
-            >
+        <div className="mb-[24px] relative h-[94px] ">
+            <div>
+                <motion.img
+                    initial={{
+                        rotate: expandSidebar ? 180 : 0,
+                    }}
+                    animate={{
+                        rotate: expandSidebar ? 180 : 0,
+                    }}
+                    onClick={() => toggleExpandSidebar()}
+                    className="ml-1 w-[28px] h-[28px] p-1 cursor-pointer bg-sidebar rounded-full  border border-white"
+                    src="chevron-right.svg"
+                    alt="arrow"
+                />
+            </div>
+            <div className={`flex items-center mt-6 h-[42px] `}>
                 <img
-                    className={`h-[40px] w-[40px] mr-4 rounded-[4px] ${
-                        expandSidebar ? "block" : "hidden"
-                    }`}
+                    className={`h-[40px] w-[40px] mr-4 rounded-[4px] `}
                     src="https://picsum.photos/200"
                     alt="profile pic"
                 />
-                <div className={`flex-1 ${expandSidebar ? "block" : "hidden"}`}>
+                <motion.div
+                    initial={{
+                        opacity: expandSidebar ? 1 : 0,
+                    }}
+                    animate={{
+                        opacity: expandSidebar ? 1 : 0,
+                    }}
+                    className={`flex-1`}
+                >
                     <p className="font-medium text-[15px]">Nishyan</p>
-                    <p className="opacity-70 underline text-[13px]">
+                    <p className="opacity-70 underline text-[13px] whitespace-nowrap">
                         Visit store
                     </p>
-                </div>
-                <img
-                    onClick={() => toggleExpandSidebar()}
-                    className=" w-[28px] h-[20px] cursor-pointer"
-                    src="bars-solid.svg"
-                    alt="arrow"
-                />
+                </motion.div>
             </div>
         </div>
     );

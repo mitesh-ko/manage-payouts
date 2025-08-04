@@ -14,7 +14,7 @@ interface Props {
 
 const SideMenu: React.FC<Props> = ({ expandSidebar }) => {
     return (
-        <div className="flex-1 overflow-y-auto">
+        <div className="flex-1 overflow-y-auto overflow-x-hidden">
             {sidemenu.map((each: menu) => {
                 return (
                     <MenuCard
