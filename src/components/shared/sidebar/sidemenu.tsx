@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useEffect } from "react";
 import sidemenu from "@/data/sidemenu.json";
 import MenuCard from "./menuCard";

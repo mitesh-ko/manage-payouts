@@ -3,7 +3,7 @@ import Searchbar from "./searchbar";
 
 const Navbar = () => {
     return (
-        <div className="bg-white py-3 px-3 items-center border-b-[1px] shadow-md border-[#D9D9D9] grid grid-cols-3  ml-[40px] sm:ml-0">
+        <div className="bg-white py-3 px-3 items-center border-b-[1px] shadow-md border-[#D9D9D9] grid grid-cols-3  ml-[42px] sm:ml-0">
             <div className="flex items-center">
                 <p className="text-[#1A181E] font-medium text-[20px] mx-3">
                     Payouts

@@ -23,14 +23,16 @@ const OrderCard: React.FC<{ order: Props }> = ({ order }) => {
             <p className="font-medium text-[14px]  text-[#146EB4] cursor-pointer hover:underline">
                 #{order.id}
             </p>
-            <p className="font-normal text-[14px] text-[#4D4D4D] flex items-center gap-2">
+            <div className=" flex items-center gap-2">
                 <div
                     className={` ${
                         statusColor[order.status]
                     } rounded-full h-2.5 w-2.5`}
                 ></div>
-                {status[order.status]}
-            </p>
+                <p className="font-normal text-[14px] text-[#4D4D4D]">
+                    {status[order.status]}
+                </p>
+            </div>
             <p className="font-normal text-[14px] text-[#4D4D4D] hidden md:block">
                 {order.transactionID}
             </p>

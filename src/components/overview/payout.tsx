@@ -2,7 +2,7 @@ import React from "react";
 
 const Payout = () => {
     return (
-        <div className="bg-payout flex-grow p-2.5 rounded-[8px] text-white overflow-hidden shadow-md">
+        <div className="flex-grow p-2.5 rounded-[8px] text-white overflow-hidden shadow-md bg-[#146EB4]">
             <p className="text-[16px] font-normal flex items-center gap-3">
                 Next Payout <img src="/help-white.svg" alt="help" />
             </p>
