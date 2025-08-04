@@ -9,10 +9,17 @@ const Profile = () => {
                     src="https://picsum.photos/200"
                     alt="profile pic"
                 />
-                <div>
+                <div className="flex-1">
                     <p className="font-medium text-[15px]">Nishyan</p>
-                    <p className="opacity-70 underline text-[13px]">Visit store</p>
+                    <p className="opacity-70 underline text-[13px]">
+                        Visit store
+                    </p>
                 </div>
+                <img
+                    className=" rotate-90 w-[24px] h-[24px]"
+                    src="chevron-right.svg"
+                    alt="arrow"
+                />
             </div>
         </div>
     );

@@ -19,7 +19,11 @@ const MenuCard: React.FC<Props> = ({ svg, title }) => {
                     : ""
             }`}
         >
-            <img src={svg} className="mr-[15px] w-[20px] h-[20px]" />
+            <img
+                src={svg}
+                className="mr-[15px] w-[20px] h-[20px]"
+                alt="menu icon"
+            />
             <p className="text-[14px] font-medium">{title}</p>
         </div>
     );

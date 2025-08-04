@@ -36,15 +36,15 @@ const OrderTable = () => {
 
     return (
         <div className="my-4">
-            <div className="grid grid-cols-5 bg-[#F2F2F2] px-[12px] py-[10px] rounded-[4px]">
+            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 bg-[#F2F2F2] px-[12px] py-[10px] rounded-[4px]">
                 <p className="font-medium text-[14px] text-[#4D4D4D]">
                     Order ID
                 </p>
                 <p className="font-medium text-[14px] text-[#4D4D4D]">Status</p>
-                <p className="font-medium text-[14px] text-[#4D4D4D]">
+                <p className="font-medium text-[14px] text-[#4D4D4D] hidden md:block">
                     Transaction ID
                 </p>
-                <p className="font-medium text-[14px] text-[#4D4D4D]">
+                <p className="font-medium text-[14px] text-[#4D4D4D] hidden lg:block">
                     Refund date
                 </p>
                 <p className="font-medium text-[14px] text-[#4D4D4D] text-right">

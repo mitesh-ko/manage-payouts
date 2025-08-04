@@ -1,11 +1,10 @@
-import React from 'react'
+import React from "react";
+import { redirect } from "next/navigation";
 
-const Payouts = () => {
-  return (
-    <div>Payouts
+const Home = () => {
+    redirect("/payouts");
 
-    </div>
-  )
-}
+    return <div>Home</div>;
+};
 
-export default Payouts
+export default Home;

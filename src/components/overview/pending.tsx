@@ -14,6 +14,7 @@ const Pending = () => {
                     <img
                         className="w-[24px] h-[24px]"
                         src="chevron-blue-right.svg"
+                        alt="arrow"
                     />
                 </p>
             </div>
