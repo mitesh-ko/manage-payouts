@@ -1,6 +1,7 @@
 import React from "react";
 import SearchTransaction from "./searchTransaction";
 import OrderTable from "./orderTable";
+import Image from "next/image";
 
 const Orders = () => {
     return (
@@ -9,10 +10,10 @@ const Orders = () => {
                 <SearchTransaction />
                 <div className="flex items-center gap-3">
                     <button className="flex items-center gap-2 font-normal text-[#4D4D4D] text-[15px] border border-[#D9D9D9] px-[12px] py-[6px] rounded-[4px]">
-                        Sort <img src="/sort.svg" alt="sort" />
+                        Sort <Image width={0} height={0} src="/sort.svg" alt="sort" />
                     </button>
                     <button className=" hidden sm:block border border-[#D9D9D9] px-[8px] py-[6px] rounded-[4px]">
-                        <img src="/download.svg" alt="download" />
+                        <Image width={0} height={0} src="/download.svg" alt="download" />
                     </button>
                 </div>
             </div>

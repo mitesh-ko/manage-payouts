@@ -1,16 +1,17 @@
 import React from "react";
+import Image from "next/image";
 
 const Payout = () => {
     return (
         <div className="flex-grow p-2.5 rounded-[8px] text-white overflow-hidden shadow-md bg-[#146EB4]">
             <p className="text-[16px] font-normal flex items-center gap-3">
-                Next Payout <img src="/help-white.svg" alt="help" />
+                Next Payout <Image width={0} height={0} src="/help-white.svg" alt="help" />
             </p>
             <div className="flex items-center justify-between my-4">
                 <p className="text-[32px] font-medium">₹2,312.23</p>
                 <p className="flex items-center gap-1 text-[16px] underline font-normal">
                     23 orders{" "}
-                    <img
+                    <Image width={0} height={0}
                         className="w-[24px] h-[24px]"
                         src="chevron-right.svg"
                         alt="arrow"

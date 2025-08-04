@@ -1,6 +1,6 @@
 "use client";
-import React, { useEffect } from "react";
-
+import React from "react";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 interface Props {
@@ -9,19 +9,19 @@ interface Props {
     expandSidebar: boolean;
 }
 
-const MenuCard: React.FC<Props> = ({ svg, title, expandSidebar }) => {
+const MenuCard: React.FC<Props> = ({ svg, title }) => {
     const router = usePathname();
 
     return (
         <div
-            className={`flex items-center rounded-[4px] h-10 px-2.5 hover:bg-white hover:bg-opacity-10 bg-opacity-10 cursor-pointer ${
+            className={`flex items-center rounded-[4px] h-10 px-2.5 hover:border-2 hover:border-white cursor-pointer ${
                 router.split("/").includes(title.toLocaleLowerCase())
-                    ? "bg-white"
+                    ? "border-2 border-white"
                     : ""
             }`}
         >
-            <img src={svg} className=" w-[20px] h-[20px]" alt="menu icon" />
-            <p className={`text-[14px] ml-[15px] font-medium`}>{title}</p>
+            <Image width={0} height={0} src={svg} className=" w-[20px] h-[20px]" alt="menu icon" />
+            <p className={`text-[14px] ml-[15px] font-medium text-white`}>{title}</p>
         </div>
     );
 };

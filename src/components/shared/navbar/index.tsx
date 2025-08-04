@@ -1,5 +1,6 @@
 import React from "react";
 import Searchbar from "./searchbar";
+import Image from "next/image";
 
 const Navbar = () => {
     return (
@@ -8,7 +9,7 @@ const Navbar = () => {
                 <p className="text-[#1A181E] font-medium text-[20px] mx-3">
                     Payouts
                 </p>
-                <img
+                <Image width={0} height={0}
                     className="h-[14px] w-[14px] mr-1.5 ml-10 hidden lg:block"
                     src="/navbar/help.svg"
                     alt="help"
@@ -20,14 +21,14 @@ const Navbar = () => {
             <Searchbar />
             <div className="items-center justify-end mr-7 gap-3 hidden md:flex">
                 <div className="h-[40px] w-[40px] flex items-center justify-center bg-[#E6E6E6] rounded-full">
-                    <img
+                    <Image width={0} height={0}
                         className="h-[20px] w-[20px]"
                         src="/navbar/group.svg"
                         alt="group"
                     />
                 </div>
                 <div>
-                    <img src="/navbar/menu.svg" alt="menu" />
+                    <Image width={0} height={0} src="/navbar/menu.svg" alt="menu" />
                 </div>
             </div>
         </div>

@@ -3,6 +3,7 @@ import Payout from "./payout";
 import Pending from "./pending";
 import Processed from "./processed";
 import Orders from "../orders";
+import Image from "next/image";
 
 const Overview = () => {
     return (
@@ -13,7 +14,7 @@ const Overview = () => {
                 </p>
                 <button className="flex gap-2 items-center justify-between rounded-[4px] border-[#D9D9D9] border px-3 py-2 text-[16px] text-[#4D4D4D] font-normal">
                     This Month
-                    <img
+                    <Image width={0} height={0}
                         className="h-[16px] w-[16px]"
                         src="/arrow.svg"
                         alt="arrow"

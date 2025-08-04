@@ -1,9 +1,10 @@
 import React from "react";
+import Image from "next/image";
 
 const SearchTransaction = () => {
     return (
         <div className="flex px-[14px] py-[8px] rounded-[6px] border border-[#D9D9D9]">
-            <img src="/navbar/search.svg" alt="search" />
+            <Image width={15} height={15} src="/navbar/search.svg" alt="search" />
             <input
                 className=" w-full outline-none bg-transparent text-[#808080] text-[14px] font-normal ml-[10px]"
                 type="text"

@@ -19,14 +19,14 @@ const Credits: React.FC<Props> = ({ expandSidebar }) => {
                     width: expandSidebar ? "24px" : "20px",
                     height: expandSidebar ? "24px" : "20px",
                 }}
-                className=" rounded-[4px] bg-opacity-10 bg-white"
+                className="rounded-[4px]"
                 src="/wallet.svg"
                 alt="wallet"
             />
             <AnimatePresence>
                 {expandSidebar && (
                     <motion.div
-                        className={`ml-[16px]`}
+                        className={`ml-[16px] text-white`}
                         initial={{
                             opacity: 0,
                         }}
